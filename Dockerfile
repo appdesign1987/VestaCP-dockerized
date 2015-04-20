@@ -3,13 +3,13 @@ FROM ubuntu:latest
 MAINTAINER jeroen@jeroenvd.nl
 
 RUN apt-get update
-RUN rm -rf /etc/apt/apt.conf.d/docker-gzip-indexes && apt-get update && apt-get -y install apt-show-versions wget curl
+RUN rm -rf /etc/apt/apt.conf.d/docker-gzip-indexes && apt-get update && apt-get -y install apt-show-versions wget git curl
 #RUN apt-get -y install apt-show-versions && apt-get update && apt-get install -f
 
 RUN mkdir /install
 ADD install-ubuntu.sh /install/install-ubuntu.sh
 RUN chmod 0755 /install/*
-RUN echo "/install/minstall-ubuntu.sh" >> /etc/init.d/rc.local
+RUN echo "/install/install-ubuntu.sh" >> /etc/init.d/rc.local
 
 # Git clone scripts repo
 RUN cd / && git clone https://github.com/appdesign1987/scripts.git
