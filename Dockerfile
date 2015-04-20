@@ -9,7 +9,8 @@ RUN rm -rf /etc/apt/apt.conf.d/docker-gzip-indexes && apt-get update && apt-get 
 RUN mkdir /install
 ADD install-ubuntu.sh /install/install-ubuntu.sh
 RUN chmod 0755 /install/*
-RUN echo "/install/install-ubuntu.sh" >> /etc/init.d/rc.local
+RUN chmod a+x /install/*
+RUN cd /install && sh ./install-ubuntu.sh
 
 # Git clone scripts repo
 RUN cd / && git clone https://github.com/appdesign1987/scripts.git
