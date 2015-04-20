@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Vesta Ubuntu installer v.04
 
