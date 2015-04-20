@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 MAINTAINER jeroen@jeroenvd.nl
 
-RUN  apt-get update && apt-get -y install apt-show-versions wget git curl
+RUN  apt-get update && apt-get -y install wget git curl
 #RUN apt-get -y install apt-show-versions && apt-get update && apt-get install -f
 
 RUN mkdir /install
