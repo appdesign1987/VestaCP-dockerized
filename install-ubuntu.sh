@@ -603,7 +603,7 @@ wget $CHOST/$VERSION/vsftpd.conf -O /etc/vsftpd.conf
 # if [ "$?" -ne 0 ]; then
 #    echo "Error: vsftpd start failed"
 #    exit 1
- fi
+# fi
 
 # Generating MySQL password if it wasn't set
 if [ -z "$mpass" ]; then
