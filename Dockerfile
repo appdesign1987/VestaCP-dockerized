@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER jeroen@jeroenvd.nl
 
-RUN  apt-get update && apt-get -y install wget git curl vsftpd
+RUN  apt-get update && apt-get -y install wget git curl vsftpd dovecot
 #RUN apt-get -y install apt-show-versions && apt-get update && apt-get install -f
 
 RUN mkdir /install
