@@ -17,7 +17,7 @@ RUN cd / && git clone https://github.com/appdesign1987/scripts.git
 # Make sure scripts are executable
 RUN cd /scripts && chmod +x *.sh
 
-EXPOSE 22 21 80 8000 3306 443 25 993 110
+EXPOSE 22 21 80 8083 3306 443 25 993 110
 
 #Start app                                                                                                                                                                                                  
-ENTRYPOINT ["bash"]
+ENTRYPOINT ["/sbin/my_init"]
