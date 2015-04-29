@@ -597,7 +597,7 @@ fi
 
 # Vsftpd configuration
 wget $CHOST/$VERSION/vsftpd.conf -O /etc/vsftpd.conf
-# update-rc.d vsftpd defaults
+ update-rc.d vsftpd defaults
 # service vsftpd stop > /dev/null 2>&1
 # service vsftpd start
 # if [ "$?" -ne 0 ]; then
@@ -685,12 +685,12 @@ rm -f dovecot-conf.d.tar.gz
 chown -R root:root /etc/dovecot
 gpasswd -a dovecot mail
 update-rc.d dovecot defaults
-service dovecot stop > /dev/null 2>&1
-service dovecot start
-if [ "$?" -ne 0 ]; then
-    echo "Error: dovecot start failed"
-    exit 1
-fi
+#service dovecot stop > /dev/null 2>&1
+#service dovecot start
+#if [ "$?" -ne 0 ]; then
+#    echo "Error: dovecot start failed"
+#    exit 1
+#fi
 
 # ClamAV configuration
 if [ "$srv_type" = 'medium' ] ||  [ "$srv_type" = 'large' ]; then
