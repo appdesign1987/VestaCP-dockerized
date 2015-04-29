@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM phusion/baseimage
 
 MAINTAINER jeroen@jeroenvd.nl
 
