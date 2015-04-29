@@ -598,12 +598,12 @@ fi
 # Vsftpd configuration
 wget $CHOST/$VERSION/vsftpd.conf -O /etc/vsftpd.conf
 # update-rc.d vsftpd defaults
-service vsftpd stop > /dev/null 2>&1
-service vsftpd start
-if [ "$?" -ne 0 ]; then
-    echo "Error: vsftpd start failed"
-    exit 1
-fi
+# service vsftpd stop > /dev/null 2>&1
+# service vsftpd start
+# if [ "$?" -ne 0 ]; then
+#    echo "Error: vsftpd start failed"
+#    exit 1
+ fi
 
 # Generating MySQL password if it wasn't set
 if [ -z "$mpass" ]; then
