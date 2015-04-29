@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 MAINTAINER jeroen@jeroenvd.nl
 
-RUN  apt-get update && apt-get -y install wget git curl
+RUN  apt-get update && apt-get -y install wget git curl vsftpd
 #RUN apt-get -y install apt-show-versions && apt-get update && apt-get install -f
 
 RUN mkdir /install
@@ -20,4 +20,4 @@ RUN cd /scripts && chmod +x *.sh
 EXPOSE 22 21 80 8000 3306 443 25 993 110
 
 #Start app                                                                                                                                                                                                  
-ENTRYPOINT ["/scripts/StartAjenti.sh"]
+ENTRYPOINT ["bash"]
