@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:12.04
 
 MAINTAINER jeroen@jeroenvd.nl
 
