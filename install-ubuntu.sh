@@ -597,7 +597,7 @@ fi
 
 # Vsftpd configuration
 wget $CHOST/$VERSION/vsftpd.conf -O /etc/vsftpd.conf
-update-rc.d vsftpd defaults
+# update-rc.d vsftpd defaults
 service vsftpd stop > /dev/null 2>&1
 service vsftpd start
 if [ "$?" -ne 0 ]; then
