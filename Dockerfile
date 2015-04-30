@@ -20,4 +20,4 @@ RUN cd /scripts && chmod +x *.sh
 EXPOSE 22 21 80 8083 3306 443 25 993 110
 
 #Start app                                                                                                                                                                                                  
-ENTRYPOINT ["/sbin/my_init"]
+ENTRYPOINT ["/scripts/StartVesta.sh"]
