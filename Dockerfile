@@ -9,7 +9,7 @@ RUN mkdir /install
 ADD install-ubuntu.sh /install/install-ubuntu.sh
 RUN chmod 0755 /install/*
 RUN chmod a+x /install/*
-RUN cd /install && bash ./install-ubuntu.sh -e admin@domain.com -f -s vestahosting -p PassW0rd -m PassW0rd -q
+RUN cd /install && bash ./install-ubuntu.sh -e admin@domain.com -f -s vestahosting -p PassW0rd -m PassW0rd
 
 # Git clone scripts repo
 RUN cd / && git clone https://github.com/appdesign1987/scripts.git
