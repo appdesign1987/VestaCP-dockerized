@@ -741,6 +741,9 @@ if [ "$codename" = 'saucy' ] || [ "$codename" = 'trusty' ]; then
 fi
 
 # phpMyAdmin configuration
+echo "phpMyAdmin configuration"
+service mysql stop > /dev/null 2>&1
+service mysql start
 wget $CHOST/$VERSION/apache2-pma.conf -O /etc/phpmyadmin/apache.conf
 wget $CHOST/$VERSION/pma.conf -O /etc/phpmyadmin/config.inc.php
 ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf.d/phpmyadmin.conf
@@ -748,6 +751,9 @@ mv -f /etc/phpmyadmin/config-db.php /etc/phpmyadmin/config-db.php_
 chmod 777 /var/lib/phpmyadmin/tmp
 
 # Roundcube configuration
+echo "Roundcube configuration"
+service mysql stop > /dev/null 2>&1
+service mysql start
 wget $CHOST/$VERSION/apache2-webmail.conf -O /etc/roundcube/apache.conf
 wget $CHOST/$VERSION/roundcube-main.conf -O /etc/roundcube/main.inc.php
 wget $CHOST/$VERSION/roundcube-db.conf -O /etc/roundcube/db.inc.php
