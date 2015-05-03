@@ -2,7 +2,7 @@ FROM phusion/baseimage
 
 MAINTAINER jeroen@jeroenvd.nl
 
-RUN  apt-get update && apt-get -y install wget git curl vsftpd dovecot-imapd dovecot-pop3d daemontools
+RUN  apt-get update && apt-get -y install wget git curl daemontools
 #RUN apt-get -y install apt-show-versions && apt-get update && apt-get install -f
 
 RUN mkdir /install
